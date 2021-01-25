@@ -5,6 +5,7 @@
 *.log
 .idea
 pom.xml.versionsBackup
+target
 # BlueJ files
 *.ctxt
 
