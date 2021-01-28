@@ -60,6 +60,46 @@ public class StandardEnvironmentStu {
 
     }
 
+    /**
+     * {@linkplain AbstractEnvironment}<p>
+     * 实现所有父类定义的接口，自身没有抽象类
+     * 构造函数
+     *
+     * 加载默认的 环境。 默认空实现，由子类实现
+     * public AbstractEnvironment() {
+     * 		customizePropertySources(this.propertySources);
+     * }
+     *
+     *
+     * 关于环境：
+     * 保存在activeProfiles 对象中， 当为空的时候，通过 {@linkplain AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME "spring.profiles.active"}
+     * 去变量中获取，其中多环境通过 空格 分割
+     *
+     * 其他通过 委托模式实现包括有：
+     * {@linkplain MutablePropertySources}
+     * {@linkplain PropertySourcesPropertyResolver}
+     *
+     */
+    private class AbstractEnvironmentStu{
 
+
+    }
+
+
+
+
+    /**
+     * {@linkplain StandardEnvironment}<p>
+     * 在 {@linkplain AbstractEnvironment} 基础上 实现customizePropertySources
+     * 添加2个 命名空间 systemEnvironment 与 systemProperties
+     * 并且 systemProperties 优先与 systemEnvironment
+     * systemProperties  java相关的属性。比如 在java -jar时 通过 -D 设置的一些内容
+     * systemEnvironment 服务器相关的一些内容，比如 环境变量
+     */
+    private class StandardEnvironmentStuClass{
+
+
+
+    }
 
 }
