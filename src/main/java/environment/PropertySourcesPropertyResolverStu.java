@@ -75,6 +75,8 @@ public class PropertySourcesPropertyResolverStu {
 
         /**
          * {@linkplain PropertyPlaceholderHelper#replacePlaceholders(String, Properties)}
+         * 测试 占位符解析方法
+         * 其中通过map模拟 property
          */
         @Test
         public void parseStringValueTest() {
