@@ -28,7 +28,7 @@ public class StandardEnvironmentStu {
      * Resolver 解析其
      * 定义了 获取属性，和解析占位富接口{@linkplain PropertyResolver#resolvePlaceholders(String)}
      */
-    public class PropertyResolverStu {
+    public static class PropertyResolverStu {
 
     }
 
@@ -41,7 +41,7 @@ public class StandardEnvironmentStu {
      * 包括：获取当前激活的环境、获取默认环境、判断给定的环境是否处于激活状态
      *
      */
-    public class EnvironmentStu{
+    public static class EnvironmentStu{
 
     }
 
@@ -55,7 +55,7 @@ public class StandardEnvironmentStu {
      * 并且设置必须存在的属性值。同时校验该值
      *
      */
-    public class ConfigurablePropertyResolverStu{
+    public static class ConfigurablePropertyResolverStu{
 
 
     }
@@ -80,7 +80,7 @@ public class StandardEnvironmentStu {
      * {@linkplain PropertySourcesPropertyResolver}
      *
      */
-    public class AbstractEnvironmentStu{
+    public static class AbstractEnvironmentStu{
 
 
     }
@@ -96,7 +96,7 @@ public class StandardEnvironmentStu {
      * systemProperties  java相关的属性。比如 在java -jar时 通过 -D 设置的一些内容
      * systemEnvironment 服务器相关的一些内容，比如 环境变量
      */
-    public class StandardEnvironmentStuClass{
+    public static class StandardEnvironmentStuClass{
 
 
 

@@ -24,7 +24,7 @@ public class MutablePropertySourcesStu {
      * 整合 多个{@linkplain PropertySource}
      * 定义 遍历、通过名称获取 PropertySource 等接口
      */
-    public class PropertySourcesStu {
+    public static class PropertySourcesStu {
 
     }
 
@@ -35,7 +35,7 @@ public class MutablePropertySourcesStu {
      * 通过list保存多个 PropertySource ，通过遍历list 支持各个方法
      *
      */
-    public class MutablePropertySourcesStuClass {
+    public static class MutablePropertySourcesStuClass {
 
     }
 }
