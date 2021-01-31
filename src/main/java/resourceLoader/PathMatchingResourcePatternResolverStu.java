@@ -63,6 +63,11 @@ public class PathMatchingResourcePatternResolverStu {
 
         /**
          * 以 classpath* 开头的资源路径
+         * 当 以 classpath* 开头，并且资源路径中没有 ANT 风格时，
+         * 直接调用
+         * ClassLoader cl = getClassLoader();
+         * cl.getResources(path);
+         * 获取包含 jar包内的所有复合规则的数据
          */
         @Test
         public void startClasspath_() throws IOException {
@@ -77,15 +82,36 @@ public class PathMatchingResourcePatternResolverStu {
 
 
         }
+
+        /**
+         * 以 classpath* 开头的资源路径，并且在路径中包含ANT风格 :*
+         *
+         * 首先取到 没有包含 * 的路径，取到全部文件，进行匹配
+         */
+        @Test
+        public void startClasspath_WhitANT() throws IOException {
+
+            PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
+
+            final Resource[] resources = pathMatchingResourcePatternResolver.getResources("classpath*:/META*/MANIFEST.MF");
+
+            for (Resource resource:resources){
+                System.out.println(resource.getURL().getPath());
+            }
+
+
+        }
+
         /**
          * 以 classpath 开头的资源路径
+         * 目前来看，应该是读取 jar包内文件的区别
          */
         @Test
         public void startClasspath() throws IOException {
 
             PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
 
-            final Resource[] resources = pathMatchingResourcePatternResolver.getResources("classpath:/META-INF/MANIFEST.MF");
+            final Resource[] resources = pathMatchingResourcePatternResolver.getResources("classpath:/base/Sim*");
 
             for (Resource resource:resources){
                 System.out.println(resource.getURL().getPath());
@@ -95,6 +121,7 @@ public class PathMatchingResourcePatternResolverStu {
         }
         /**
          * 以 / 开头的资源路径
+         * 默认是读取classpath的文件
          */
         @Test
         public void startPath() throws IOException {
@@ -112,6 +139,7 @@ public class PathMatchingResourcePatternResolverStu {
 
         /**
          * 以 file: 开头的资源路径
+         *
          */
         @Test
         public void startFilePath() throws IOException {
