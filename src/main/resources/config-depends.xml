@@ -4,7 +4,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="simpleBean" class="beanFactory.test.SimpleBean" depends-on="simpleDependsBean">
+    <bean name="simpleBean" class="beanFactory.test.SimpleBean" depends-on="simpleDependsBean" autowire="byType">
         <constructor-arg index="0" ref="simpleBeanIn1"/>
         <constructor-arg index="1" ref="simpleBeanIn2"/>
     </bean>

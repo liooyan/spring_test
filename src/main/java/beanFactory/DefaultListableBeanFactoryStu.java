@@ -1,11 +1,10 @@
 package beanFactory;
 
 import beanRegistry.DefaultSingletonBeanRegistryStu;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.config.SingletonBeanRegistry;
+import org.springframework.beans.factory.config.*;
 import org.springframework.beans.factory.support.*;
 
 /**
@@ -160,11 +159,6 @@ public class DefaultListableBeanFactoryStu {
 
         /**
          * https://blog.csdn.net/andy_zhang2007/article/details/86514320
-         *
-         *
-         *
-         *
-         *
          */
         public void getMergedBeanDefinition() {
 
@@ -174,19 +168,63 @@ public class DefaultListableBeanFactoryStu {
 
     /**
      * {@linkplain AbstractAutowireCapableBeanFactory}
-     *
-     *
      */
     public static class AbstractAutowireCapableBeanFactoryStu {
 
 
         /**
          * {@linkplain AbstractAutowireCapableBeanFactory#createBean(String, RootBeanDefinition, Object[])}
-         *
-         *
-         *
+         * 1、获取当前类的class
+         * 2、处理 lookup-method和replaced-method 见:mbdToUse.prepareMethodOverrides(); https://blog.csdn.net/lightofmiracle/article/details/74988243
+         * 3、实例化前，给BeanPostProcessors允许直接返回实例的机会，如果返回bean不为null 直接返回bean
+         * 解析见： {@linkplain AbstractAutowireCapableBeanFactoryStu#resolveBeforeInstantiation()}
+         * 4、调用 {@linkplain AbstractAutowireCapableBeanFactory#doCreateBean(String, RootBeanDefinition, Object[])}实例化
+         * 解析见：{@linkplain AbstractAutowireCapableBeanFactoryStu#doCreateBean()}
          */
-        public void createBean(){}
+        public void createBean() {
+
+
+        }
+
+
+        /**
+         * {@linkplain AbstractAutowireCapableBeanFactory#resolveBeforeInstantiation(String, RootBeanDefinition)}
+         * String beanName bean 名称
+         * RootBeanDefinition mbd bean定义
+         * <p>
+         * 1、对于beanPostProcessor，筛选出 {@linkplain InstantiationAwareBeanPostProcessor}
+         * 执行{@linkplain InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation(Class, String)}
+         * 如果返回不是空，将不进行剩下的bean创建。
+         * 2、执行beanPostRrocessor 的 postProcessAfterInitialization
+         * 返回bean对象
+         */
+        public void resolveBeforeInstantiation() {
+
+
+        }
+
+        /**
+         * {@linkplain AbstractAutowireCapableBeanFactory#doCreateBean(String, RootBeanDefinition, Object[])}
+         * 1、生成{@linkplain BeanWrapper} 对象。调用方法： {@linkplain AbstractAutowireCapableBeanFactory#createBeanInstance(String, RootBeanDefinition, Object[])}
+         *  对于构造函数依赖，应该是在此执行。
+         * 2、对于MergedBeanDefinition 执行  {@linkplain MergedBeanDefinitionPostProcessor#postProcessMergedBeanDefinition(RootBeanDefinition, Class, String)}
+         * 3、如果当前类存在允许依赖，及当前类正在创建：调用{@linkplain SmartInstantiationAwareBeanPostProcessor#getEarlyBeanReference(Object, String)}后直接注册在单例对象中。
+         * 4、装配bean属性 {@linkplain AbstractAutowireCapableBeanFactory#populateBean(String, RootBeanDefinition, BeanWrapper)}
+         *   4.1 根据{@linkplain InstantiationAwareBeanPostProcessor#postProcessAfterInstantiation(Object, String)}判断当前类是否具有后置处理能力
+         *   4.2 解决xml 中的自动装在。autowire="byType" 需要 get和set方法
+         *   4.3 执行{@link InstantiationAwareBeanPostProcessor} 的postProcessProperties 和 postProcessPropertyValues
+         *      应该是 自动装载属性
+         *   4.4 {@link AbstractAutowireCapableBeanFactory#applyPropertyValues(String, BeanDefinition, BeanWrapper, PropertyValues)}
+         *      应该是把属性的值注入到 bean中
+         * 5、初始化bean {@linkplain AbstractAutowireCapableBeanFactory#initializeBean(String, Object, RootBeanDefinition)}
+         *  5.1、判断Aware 子类。 注入对应属性
+         *  5.2 执行 {@linkplain BeanPostProcessor#postProcessBeforeInitialization(Object, String)}
+         *  5.3 执行 invokeInitMethods 方法 具体为：InitializingBean 的子类。或者 afterPropertiesSet 方法
+         *  5.2 执行 {@linkplain BeanPostProcessor#postProcessAfterInitialization(Object, String)}
+         */
+        public void doCreateBean() {
+
+        }
 
 
     }
