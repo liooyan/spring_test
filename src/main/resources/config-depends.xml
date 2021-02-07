@@ -8,7 +8,10 @@
         <constructor-arg index="0" ref="simpleBeanIn1"/>
         <constructor-arg index="1" ref="simpleBeanIn2"/>
     </bean>
-    <bean name="simpleBeanIn1" class="beanFactory.test.SimpleBeanIn1"/>
+
+
+    <bean name="simpleBean2" class="beanFactory.test.SimpleBean2"  autowire="byType" />
+    <bean name="simpleBeanIn1" class="beanFactory.test.SimpleBeanIn1" autowire="byType"/>
     <bean name="simpleBeanIn2" class="beanFactory.test.SimpleBeanIn2"/>
     <bean name="simpleDependsBean" class="beanFactory.test.SimpleDependsBean"/>
 
