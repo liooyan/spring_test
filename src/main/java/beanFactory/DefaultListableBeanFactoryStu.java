@@ -7,6 +7,8 @@ import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.*;
 import org.springframework.beans.factory.support.*;
 
+import java.lang.reflect.Constructor;
+
 /**
  * {@linkplain DefaultListableBeanFactory}
  * 该类主要实现了3个顶级接口分别是:
@@ -226,6 +228,31 @@ public class DefaultListableBeanFactoryStu {
 
         }
 
+
+        /**
+         * {@linkplain AbstractAutowireCapableBeanFactory#createBeanInstance(String, RootBeanDefinition, Object[])}
+         * 1、获取class对象
+         * 2、判断是否为@bean的情况，具体在注解方法的时候看 //TODO 2个点不清楚
+         * 3、判断是否有构造函数
+         *  3.1 无时：{@linkplain AbstractAutowireCapableBeanFactory#instantiateBean(String, RootBeanDefinition)}
+         *  解析见：{@linkplain ConstructorResolverStu}
+         *  3.2 有时：{@linkplain AbstractAutowireCapableBeanFactory#autowireConstructor(String, RootBeanDefinition, Constructor[], Object[])}
+         *
+         *
+         *
+         *
+         */
+        public void  createBeanInstance(){
+
+        }
+
+    }
+
+    /**
+     * {@linkplain org.springframework.beans.factory.support.ConstructorResolver}
+     *
+     */
+    public static  class ConstructorResolverStu{
 
     }
 
