@@ -1,5 +1,6 @@
 package boot.applicationListener;
 
+import boot.applicationEvent.ApplicationEventStu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.GenericApplicationListener;
@@ -17,9 +18,11 @@ import org.springframework.context.event.SmartApplicationListener;
  *  其中 值必为：{@linkplain ApplicationListener} 子类
  * 2、各监听过程
  *  对于不同时间段。spring 会发送对应的事件，
- *  见 //TODO 需要解析
+ *  见 {@linkplain ApplicationEventStu}
  *
- *
+ * 3、是否发送筛选
+ * 3-1 一方面通过 {@linkplain GenericApplicationListener} 的子类，来判断事件类型与事件源判断是否需要发送事件。
+ * 3-2 另一方面通过 {@linkplain GenericApplicationListenerAdapter} 根据监听器的泛型来确定当前事件是否发送。
  *
  *
  * @author top.lioyan
