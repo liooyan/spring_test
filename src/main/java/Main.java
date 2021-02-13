@@ -1,4 +1,5 @@
 import base.SimpleBean;
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
