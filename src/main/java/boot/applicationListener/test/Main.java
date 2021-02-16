@@ -13,8 +13,23 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class Main {
 
     public static void main(String[] args) {
-        final ConfigurableApplicationContext run = SpringApplication.run(Main.class, args);
+        final ConfigurableApplicationContext run = SpringApplication.run(Main.class, "--liyan=1231");
         final SimpleBean bean = run.getBean(SimpleBean.class);
         bean.send();
+    }
+
+
+    public static class A{
+
+
+    }
+
+    public  class B{
+
+
+    }
+
+    public String a (){
+        return "liyan";
     }
 }
