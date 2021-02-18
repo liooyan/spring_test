@@ -1,5 +1,6 @@
 package boot.beanDefinitionRegistryPostProcessor.test;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,8 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class SimpleBean {
 
+    @Autowired
+    private SimpleBeanManaged simpleBeanManaged;
 
-    public void send(){
+    public void send() {
 
         System.out.println("send system");
     }
