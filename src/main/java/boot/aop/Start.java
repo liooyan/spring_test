@@ -11,6 +11,7 @@ import org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProx
 import org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder;
 import org.springframework.aop.framework.AopInfrastructureBean;
 import org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator;
+import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor;
 import org.springframework.boot.autoconfigure.aop.AopAutoConfiguration;
@@ -85,7 +86,8 @@ public class Start {
      *  1、第一次加载是获取到所有aop的类 逻辑在 {@linkplain BeanFactoryAspectJAdvisorsBuilder#buildAspectJAdvisors()}
      *     有 {@linkplain Aspect }注解的类
      *  2、在第一步找到的方法中 继续找每个类找到包含这注解的方法 Pointcut.class, Around.class, Before.class, After.class, AfterReturning.class, AfterThrowing.class
-     *
+     *  将其保存起来，作为aop的切面
+     *  3、对每个方法匹配aop却面。在 {@linkplain AopUtils#canApply(Advisor, Class, boolean)}
      *
      *
      *
