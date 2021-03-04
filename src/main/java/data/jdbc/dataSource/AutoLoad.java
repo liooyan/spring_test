@@ -17,7 +17,7 @@ public class AutoLoad {
     /**
      *
      * 通过 conn = DriverManager.getConnection(url, username, password); 获取连接
-     * 1、执行DriverManager 中的 staic 方法。执行 {@linkplain DriverManager#loadInitialDrivers()} 方法
+     * 1、执行DriverManager 中的 static 方法。执行 {@linkplain DriverManager#loadInitialDrivers()} 方法
      *
      * 2、 通过 ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class);
      *          获取到所有在META-INF 下文件名为范型类的文件名内容的class。

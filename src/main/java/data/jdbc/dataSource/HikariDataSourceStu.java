@@ -100,7 +100,7 @@ public class HikariDataSourceStu {
         final Statement statement4 = hikariPool.getConnection().createStatement();
         final Statement statement5 = hikariPool.getConnection().createStatement();
         final ResultSet resultSet = statement.executeQuery("select * from kg_hot_search");
-
+        hikariPool.getConnection().close();
         while (resultSet.next()) {
             System.out.println(resultSet.getString("keyword"));
         }
