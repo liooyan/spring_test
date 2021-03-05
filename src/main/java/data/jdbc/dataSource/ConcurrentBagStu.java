@@ -33,12 +33,8 @@ public class ConcurrentBagStu {
      * 2、线程局部变量。threadList，是一个list。 用于保存本地的连接池
      * 3、handoffQueue 设置队列
      *
-     *
-     *
-     *
      */
     @Test
-
     public void init() throws InterruptedException {
 
     }
