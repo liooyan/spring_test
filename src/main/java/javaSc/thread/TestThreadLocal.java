@@ -1,11 +1,23 @@
-package javaSc;
+package javaSc.thread;
+
+import java.util.function.Supplier;
 
 /**
+ * 线程变量，
+ * {@linkplain ThreadLocal#withInitial(Supplier)}
+ * 可以声明线程变量。
+ *
+ * Thread  线程
+ * Local 本地
+ * with 和
+ * Initial 最初的
+ * Supplier 提供者
+ *
  * @author top.lioyan
  * @version 1.0
  * @date 2021/3/4 3:14 下午
  */
-public class TestThreadlocal {
+public class TestThreadLocal {
     private static ThreadLocal<String> local = ThreadLocal.withInitial(() -> "init");
 
     public static void main(String[] args) throws InterruptedException {
