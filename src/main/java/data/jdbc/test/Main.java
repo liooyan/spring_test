@@ -6,6 +6,9 @@ import data.jdbc.test.dao.KgHotDao;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+
+import javax.persistence.EntityManager;
 
 /**
  *
@@ -23,7 +26,8 @@ public class Main {
         final KgHotDao bean = run.getBean(KgHotDao.class);
         final Iterable<KgHotSearchDo> all = bean.findAll();
         all.forEach(s-> System.out.println(s.getKeyword()));
-
+        final HibernateJpaVendorAdapter bean2 = run.getBean(HibernateJpaVendorAdapter.class);
+        final Class<? extends EntityManager> entityManagerInterface = bean2.getEntityManagerInterface();
 
         final HikariDataSource bean1 = run.getBean(HikariDataSource.class);
 
