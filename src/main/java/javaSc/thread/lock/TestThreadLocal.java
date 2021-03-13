@@ -1,4 +1,4 @@
-package javaSc.thread;
+package javaSc.thread.lock;
 
 import java.util.function.Supplier;
 

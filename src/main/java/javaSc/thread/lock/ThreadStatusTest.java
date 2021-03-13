@@ -1,4 +1,4 @@
-package javaSc.thread;
+package javaSc.thread.lock;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -78,6 +78,7 @@ public class ThreadStatusTest {
 
         @Override
         public void run() {
+
             long current = 1L;
 
             long max = 20000L;
