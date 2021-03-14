@@ -11,7 +11,7 @@ import java.util.concurrent.*;
  * {@linkplain java.util.concurrent.ThreadPoolExecutor}
  * Thread 线程
  * Pool 水池
- *
+ * Executor
  *
  * @author top.lioyan
  * @version 1.0

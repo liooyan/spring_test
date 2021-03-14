@@ -13,6 +13,7 @@ public class Main {
         SimpleBean bean = context.getBean(SimpleBean.class);
         bean.send();
         context.close();
+
     }
 }
 
