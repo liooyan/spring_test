@@ -3,6 +3,9 @@ package javaSc.thread.executor;
 import java.util.Collection;
 import java.util.concurrent.*;
 
+import static java.lang.Integer.toBinaryString;
+
+
 /**
  * {@linkplain ThreadPoolExecutor} 源码解析
  * {@linkplain Executor}
@@ -88,23 +91,20 @@ public class ThreadPoolExecutorTest {
     public static class ThreadPoolExecutorClass {
 
         public static void main(String[] args) {
-            //关于几个变量的值
+            //用来计数的最大位数
             int COUNT_BITS = Integer.SIZE - 3;
-            int CAPACITY = (1 << COUNT_BITS) - 1;
 
-            // runState is stored in the high-order bits
             int RUNNING = -1 << COUNT_BITS;
             int SHUTDOWN = 0 << COUNT_BITS;
              int STOP = 1 << COUNT_BITS;
             int TIDYING = 2 << COUNT_BITS;
             int TERMINATED = 3 << COUNT_BITS;
 
-            System.out.println(RUNNING+"_"+Integer.toBinaryString(RUNNING));
-            System.out.println(SHUTDOWN+"_"+Integer.toBinaryString(SHUTDOWN));
-            System.out.println(STOP+"_"+Integer.toBinaryString(STOP));
-            System.out.println(TIDYING+"_"+Integer.toBinaryString(TIDYING));
-            System.out.println(TERMINATED+"_"+Integer.toBinaryString(TERMINATED));
-            System.out.println(~((1 << COUNT_BITS) - 1));
+            System.out.println("RUNNING   :"+toBinaryString(RUNNING));
+            System.out.println("SHUTDOWN  :"+toBinaryString(SHUTDOWN));
+            System.out.println("STOP      :"+toBinaryString(STOP));
+            System.out.println("TIDYING   :"+toBinaryString(TIDYING));
+            System.out.println("TERMINATED:"+toBinaryString(TERMINATED));
         }
 
     }

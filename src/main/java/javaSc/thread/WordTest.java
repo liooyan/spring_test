@@ -11,40 +11,46 @@ import java.util.List;
  * waiting
  * terminated
  * Thread
- * Factory
- * Thread  线程
- * Local 本地
+ * factory
+ * thread  线程
+ * local 本地
  * with 和
- * Initial 最初的
- * Supplier 提供者
+ * initial 最初的
+ * supplier 提供者
  * synchronized
- * Read
- * Write
- * Lock
- * Reentrant
- * Condition
- * Future
- * Callable
- * Pool 水池
- * Executor
- * Fixed
- * Service
+ * read
+ * write
+ * lock
+ * reentrant
+ * condition
+ * future
+ * callable
+ * pool 水池
+ * executor
+ * fixed
+ * service
  * execute
  * shutdown
- * Terminated
+ * terminated
  * await
- * Termination
+ * termination
  * invoke
- * Rejected
- * Handler
- * Blocking
- * Queue
+ * rejected
+ * handler
+ * blocking
+ * queue
  * core
  * Pool
  * maximum
  * keep
- * Alive
+ * alive
  * offer
+ *
+ *
+ * lock相关
+ *
+ *
+ *
  * @author top.lioyan
  * @version 1.0
  * @date 2021/3/14 10:59 上午
