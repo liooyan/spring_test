@@ -1,5 +1,6 @@
-package boot.applicationEvent.test;
+package beanDefinition.test;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,11 +9,13 @@ import org.springframework.stereotype.Service;
  * @date 2021/2/13 10:18 下午
  */
 @Service
-public class SimpleBean {
+@Primary
+public class SimpleBean3To implements SimpleBean3Sup {
 
 
     public void send(){
 
         System.out.println("send system");
     }
+
 }

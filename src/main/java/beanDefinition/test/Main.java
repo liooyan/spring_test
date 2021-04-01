@@ -1,4 +1,4 @@
-package boot.applicationEvent.test;
+package beanDefinition.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +15,15 @@ public class Main {
     public static void main(String[] args) {
         final ConfigurableApplicationContext run = SpringApplication.run(Main.class, args);
         final SimpleBean bean = run.getBean(SimpleBean.class);
+        final SimpleBean2 bean2 = run.getBean(SimpleBean2.class);
+        final SimpleBeanPrototype simpleBeanPrototype = run.getBean(SimpleBeanPrototype.class);
+        final SimpleBeanPrototype simpleBeanPrototype2 = run.getBean(SimpleBeanPrototype.class);
+
+        final Object factoryBeanTest = run.getBean("factoryBeanTest");
+        final Object factoryBeanTest2 = run.getBean("factoryBeanTest");
+        final ConstructorTest constructorTest = run.getBean(ConstructorTest.class);
+
+
         bean.send();
     }
 }

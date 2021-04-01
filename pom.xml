@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>spark_test</artifactId>
-    <version>v1.1.38</version>
+    <version>v1.1.39</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

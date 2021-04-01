@@ -10,6 +10,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.Enumeration;
 import java.util.stream.Collectors;
 
 /**
@@ -80,6 +82,8 @@ public class PathMatchingResourcePatternResolverStu {
                 System.out.println(resource.getURL().getPath());
             }
 
+            //最终调用。
+            final Enumeration<URL> resourceUrls= this.getClass().getClassLoader().getResources("META-INF/MANIFEST.MF");
 
         }
 
@@ -139,7 +143,6 @@ public class PathMatchingResourcePatternResolverStu {
 
         /**
          * 以 file: 开头的资源路径
-         *
          */
         @Test
         public void startFilePath() throws IOException {

@@ -1,6 +1,7 @@
 import base.SimpleBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @author top.lioyan
@@ -11,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:config.xml");
         SimpleBean bean = context.getBean(SimpleBean.class);
+        final ConfigurableEnvironment environment = context.getEnvironment();
+
         bean.send();
         context.close();
 
