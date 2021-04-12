@@ -24,7 +24,7 @@ package javaSc.reflection;
  * interceptor
  * enhancer
  * create
- *
+ * dynamic
  *
  *
  *

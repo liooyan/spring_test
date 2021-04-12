@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Scope;
  *
  *
  */
-public class AnnotatedGenericBeanDefinitionStu {
+public class   AnnotatedGenericBeanDefinitionStu {
 
 
     /**

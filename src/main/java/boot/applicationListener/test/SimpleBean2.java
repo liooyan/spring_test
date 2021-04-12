@@ -1,5 +1,6 @@
 package boot.applicationListener.test;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,16 +9,14 @@ import org.springframework.stereotype.Service;
  * @date 2021/2/13 10:18 下午
  */
 @Service
-public class SimpleBean {
+public class SimpleBean2 {
 
-    private SimpleBean2 simpleBean;
+    @Autowired
+    private SimpleBean simpleBean;
 
-    public SimpleBean(SimpleBean2 simpleBean) {
-        this.simpleBean = simpleBean;
-    }
 
     public void send() {
-        simpleBean.send();
+        System.out.println(simpleBean);
         System.out.println("send system");
     }
 }

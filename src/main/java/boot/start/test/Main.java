@@ -1,4 +1,4 @@
-package beanFactory.test;
+package boot.start.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
