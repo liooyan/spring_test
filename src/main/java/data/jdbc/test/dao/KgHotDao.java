@@ -9,4 +9,8 @@ import org.springframework.data.repository.CrudRepository;
  * @date 2021/3/1 11:27 上午
  */
 public interface KgHotDao extends CrudRepository<KgHotSearchDo, Integer> {
+
+
+    KgHotSearchDo findByKeyword(String keyword);
+
 }

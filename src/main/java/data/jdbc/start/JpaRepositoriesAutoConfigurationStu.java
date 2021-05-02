@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfig
 import org.springframework.boot.autoconfigure.orm.jpa.EntityManagerFactoryBuilderCustomizer;
 import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean;
 
 /**
  * 应该是jpa的一些基本类型解析
@@ -14,6 +15,8 @@ import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
  * 其他
  * 1、import {@linkplain org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesRegistrar}
  * 2、after {@linkplain TaskExecutionAutoConfiguration}
+ *
+ * {@linkplain JpaRepositoryFactoryBean}
  * @author top.lioyan
  * @version 1.0
  * @date 2021/3/1 5:26 下午

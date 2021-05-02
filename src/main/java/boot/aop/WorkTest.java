@@ -31,6 +31,14 @@ package boot.aop;
  *
  *
  *
+ * frozen
+ * advisor
+ * activate
+ * complete
+ * proxied
+ * interfaces
+ *
+ *
  * @author top.lioyan
  * @version 1.0
  * @date 2021/4/10 11:48 上午

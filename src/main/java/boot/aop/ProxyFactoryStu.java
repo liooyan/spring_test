@@ -1,12 +1,20 @@
 package boot.aop;
 
-import org.aopalliance.aop.Advice;
 import org.springframework.aop.Advisor;
-import org.springframework.aop.framework.ProxyFactory;
+import org.springframework.aop.framework.*;
 
 /**
  * {@linkplain ProxyFactory}
  *  将目标与切面组装
+ *
+ *  父类:
+ *
+ *
+ *
+ *
+ *  {@linkplain ProxyConfig}    {@linkplain Advised}
+ *     {@linkplain AdvisedSupport}
+ *     {@linkplain ProxyCreatorSupport}
  *
  * @author top.lioyan
  * @version 1.0
@@ -14,25 +22,60 @@ import org.springframework.aop.framework.ProxyFactory;
  */
 public class ProxyFactoryStu {
 
-    public static void main(String[] args) {
-        ProxyFactory proxyFactory = new ProxyFactory();
-       // proxyFactory.copyFrom(this);
 
-
+    /**
+     * {@linkplain ProxyConfig}
+     * 定义 代理相关配置
+     *
+     * setProxyTargetClass 是否强制代理当前类
+     * setOptimize //TODO
+     * setOpaque
+     * setExposeProxy
+     *
+     *
+     *
+     *
+     */
+    public static class  ProxyConfigStu{
 
     }
 
 
-    private static  class MyAdvisor implements Advisor{
-        @Override
-        public Advice getAdvice() {
-            return null;
-        }
+    /**
+     *
+     * {@linkplain Advised}
+     * 管理：TargetSource 和 被代理的class
+     * 以及：{@linkplain Advisor}
+     *
+     *
+     *
+     *
+     */
+    public static class AdvisedStu{
 
-        @Override
-        public boolean isPerInstance() {
-            return false;
-        }
+    }
+
+
+
+    /**
+     *
+     *
+     *
+     *
+     */
+    public static class AdvisedSupportStu{
+
+    }
+
+
+    /**
+     *
+     *
+     *
+     */
+    public static class ProxyCreatorSupportStu{
+
+
     }
 
 
