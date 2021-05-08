@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 public class BeanParser {
 
     @Bean
-//    @ConditionalOnBean(WordTest.class)
     public BeanOnBeanTest beanOnBeanTest(){
         return new BeanOnBeanTest();
     }
@@ -27,8 +26,6 @@ public class BeanParser {
 
 
     public static class  BeanOnBeanTest{
-
-
 
     }
 }

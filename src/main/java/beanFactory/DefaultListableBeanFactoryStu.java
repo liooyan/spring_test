@@ -6,8 +6,11 @@ import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.*;
 import org.springframework.beans.factory.support.*;
+import org.springframework.core.ResolvableType;
 
 import java.lang.reflect.Constructor;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * {@linkplain DefaultListableBeanFactory}
@@ -253,6 +256,17 @@ public class DefaultListableBeanFactoryStu {
      *
      */
     public static  class ConstructorResolverStu{
+
+    }
+
+
+    public static void main(String[] args) {
+
+        Map<String,Object> a = new HashMap<>();
+
+        final ResolvableType resolvableType = ResolvableType.forClassWithGenerics(HashMap.class, ResolvableType.forClass(String.class), ResolvableType.forClass(Object.class));
+
+        System.out.println(resolvableType);
 
     }
 
