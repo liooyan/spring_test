@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 # 获取当前版本号
 MVN_VERSION=$(mvn -q -N -Dexec.executable="echo"  -Dexec.args='${project.version}'  org.codehaus.mojo:exec-maven-plugin:1.3.1:exec)
 # 获取项目名称
