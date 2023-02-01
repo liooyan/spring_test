@@ -1,7 +1,7 @@
 package cn.lioyan.beans;
 
 /**
- * {@link BeanWrapperImpl}
+ * {@link org.springframework.beans.BeanWrapperImpl}
  *  继承自{@link  AbstractNestablePropertyAccessor}
  *  实现： PropertyHandler 与 newNestedPropertyAccessor
  * @author com.lioyan
