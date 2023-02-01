@@ -1,4 +1,4 @@
-package cn.lioyan.beans;
+package cn.lioyan.beans.test;
 
 import org.springframework.stereotype.Service;
 
@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class Send
 {
+
+
+
     public void send(){
         System.out.println(1111);
     }

@@ -1,5 +1,6 @@
-package cn.lioyan.beans;
+package cn.lioyan.beans.test;
 
+import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
