@@ -16,8 +16,8 @@ import java.util.Set;
  * 如果是field 就实在设置。<br>
  * <br>
  * <br>
- *
- *
+ * determineCandidateConstructors 确定构造函数、也是通过Autowired、Value、Inject 注解，如果有这些注解，就返回候选，如果只有一个构造函数就使用默认这个<br>
+ * <br>
  * <br>
  * <br>
  * <br>
