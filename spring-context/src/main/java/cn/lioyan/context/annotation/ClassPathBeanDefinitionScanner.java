@@ -24,7 +24,7 @@ import org.springframework.context.annotation.ClassPathScanningCandidateComponen
  * <br>
  * <br>
  * <br>
- *
+ *  注意： 也就是说：默认通过注解只有Component 的类才会被添加到spring中
  * @author com.lioyan
  * @date 2023/2/2  15:48
  */
