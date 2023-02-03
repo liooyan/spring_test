@@ -39,7 +39,7 @@ import org.springframework.context.ApplicationContextInitializer;
  *  <li>{@link cn.lioyan.boot.env.EnvironmentPostProcessorApplicationListener} </li>
  *
  *
- *
+ * ApplicationContextInitializer 目前没有特别需要关注的，后面再解析说明
  *
  * @author com.lioyan
  * @date 2023/2/3  10:46
