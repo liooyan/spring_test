@@ -1,7 +1,6 @@
 package cn.lioyan.context.annotation;
 
 import org.springframework.context.annotation.Condition;
-import org.springframework.context.annotation.ConditionEvaluator;
 import org.springframework.context.annotation.Conditional;
 
 /**
@@ -12,9 +11,8 @@ import org.springframework.context.annotation.Conditional;
  * <br>
  * <br>
  * <br>
- * 上面的所有方法都是通过 {@link ConditionEvaluator} 进行判断<br>
+ * 上面的所有方法都是通过 {@link org.springframework.context.annotation.ConditionEvaluator} 进行判断<br>
  * 所有内容都是通过{@link Conditional} 注解里的value值进行判断 它的值为{@link Condition} 子类<br>
- * 在spring-boot 中有注入<br>
  *
  * <br>
  * <br>

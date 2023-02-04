@@ -1,5 +1,7 @@
 package cn.lioyan.context.test2;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
  * @author com.lioyan
  * @date 2023/2/1  11:11
  */
+@ConditionalOnProperty
 public class Send2
 {
 
