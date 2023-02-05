@@ -9,6 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import java.util.List;
 
 
+@SpringBootApplication
 public class Main
 {
 

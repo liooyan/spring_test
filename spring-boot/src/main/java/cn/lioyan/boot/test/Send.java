@@ -5,6 +5,7 @@ import cn.lioyan.boot.test2.Send4;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
  * @date 2023/2/1  11:11
  */
 @Import(Send2.class)
-@ConditionalOnBean(Send4.class)
+@Component
 public class Send
 {
 
