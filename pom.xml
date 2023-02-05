@@ -15,6 +15,7 @@
         <module>spring-context</module>
         <module>spring-boot</module>
         <module>spring-boot-autoconfigure</module>
+        <module>spring-aop</module>
     </modules>
 
     <parent>
