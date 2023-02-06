@@ -1,4 +1,4 @@
-package cn.lioyan.aop;
+package cn.lioyan.aopalliance.intercept;
 
 /**
  * {@link org.aopalliance.aop.Advice}

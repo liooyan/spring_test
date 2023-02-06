@@ -4,7 +4,7 @@ import org.aspectj.weaver.tools.JoinPointMatch;
 
 
 /**
- * {@link AspectJAfterReturningAdvice}
+ * {@link org.springframework.aop.aspectj.AspectJAfterReturningAdvice}
  * 实现 afterReturning 方法。
  * 参数注入的是{@link JoinPointMatch}，如果切面的returnValue 与 被代理返回的类型符合，就执行。也是调用父类invokeAdviceMethod
  * @author com.lioyan
