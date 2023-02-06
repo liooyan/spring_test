@@ -21,4 +21,9 @@ public class Send
         return "1234";
 
     }
+    public String send2(String agr){
+        System.out.println(agr);
+        return "1234";
+
+    }
 }

@@ -20,7 +20,7 @@ public class TestAop {
     public void doAfter(JoinPoint joinPoint) {
         System.out.println("方法执行后");
     }
-    @AfterReturning(value = "execution (public * cn.lioyan.aop.test.Send.*(..) )",returning = "returnValue")
+    @AfterReturning(value = "execution (public * cn.lioyan.aop.test.Send.send2(..) )",returning = "returnValue")
     public void doAfterReturning(JoinPoint joinPoint, Object returnValue) {
         System.out.println("方法执行后AfterReturning");
     }
