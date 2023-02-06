@@ -14,6 +14,6 @@ public class Main {
     public static void main(String[] args) {
 
         ConfigurableApplicationContext run = SpringApplication.run(Main.class, args);
-        run.getBean(Send.class).send();
+        run.getBean(Send.class).send("1234");
     }
 }

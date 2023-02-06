@@ -16,7 +16,9 @@ public class Send
 
 
 
-    public void send(){
-        System.out.println(1111);
+    public String send(String agr){
+        System.out.println(agr);
+        return "1234";
+
     }
 }
