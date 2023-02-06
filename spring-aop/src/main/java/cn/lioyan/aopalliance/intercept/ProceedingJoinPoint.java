@@ -6,6 +6,6 @@ package cn.lioyan.aopalliance.intercept;
  * @author com.lioyan
  * @date 2023/2/6  14:54
  */
-public class ProceedingJoinPoint
+public interface ProceedingJoinPoint
 {
 }
