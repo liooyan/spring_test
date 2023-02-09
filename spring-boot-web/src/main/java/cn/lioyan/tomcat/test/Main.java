@@ -6,6 +6,8 @@ import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.startup.Tomcat;
+import org.apache.tomcat.util.descriptor.web.FilterDef;
+import org.apache.tomcat.util.descriptor.web.FilterMap;
 
 
 public class Main
@@ -23,6 +25,14 @@ public class Main
         t.getService().addConnector(con);
         //注册servlet
         Context ctx = t.addContext("/", null);
+        FilterDef filterDef = new FilterDef();
+        filterDef.setFilter(new MyFilter());
+        filterDef.setFilterName("myFilter");
+        ctx.addFilterDef(filterDef);
+        FilterMap filterMap = new FilterMap();
+        filterMap.setFilterName("myFilter");
+        filterMap.addURLPattern("/hello");
+        ctx.addFilterMap(filterMap);
         Tomcat.addServlet(
             ctx,
             "helloServlet",
