@@ -1,6 +1,8 @@
 package cn.lioyan.test;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -8,6 +10,9 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -19,6 +24,7 @@ import java.io.File;
 @RestController
 public class TestRest
 {
+
 
     @GetMapping("/test")
     public void send()
