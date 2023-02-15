@@ -18,6 +18,7 @@
         <module>spring-aop</module>
         <module>spring-boot-web</module>
         <module>spring-boot-webmvc</module>
+        <module>spring-cloud</module>
     </modules>
 
     <parent>
@@ -25,6 +26,17 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.8</version>
     </parent>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2021.0.5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
 
