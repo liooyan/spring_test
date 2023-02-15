@@ -38,9 +38,10 @@ public class TestRest
     }
 
     @PostMapping("/file")
-    public void file(@RequestParam("file1")MultipartFile multipartFile)
+    public String file(@RequestParam("file1")MultipartFile multipartFile)
     {
         System.out.println(multipartFile.getName());
+        return "true";
     }
 
     @PostMapping("/file/{id}")
