@@ -25,14 +25,14 @@ public class Main
         t.getService().addConnector(con);
         //注册servlet
         Context ctx = t.addContext("/", null);
-        FilterDef filterDef = new FilterDef();
-        filterDef.setFilter(new MyFilter());
-        filterDef.setFilterName("myFilter");
-        ctx.addFilterDef(filterDef);
-        FilterMap filterMap = new FilterMap();
-        filterMap.setFilterName("myFilter");
-        filterMap.addURLPattern("/hello");
-        ctx.addFilterMap(filterMap);
+//        FilterDef filterDef = new FilterDef();
+//        filterDef.setFilter(new MyFilter());
+//        filterDef.setFilterName("myFilter");
+//        ctx.addFilterDef(filterDef);
+//        FilterMap filterMap = new FilterMap();
+//        filterMap.setFilterName("myFilter");
+//        filterMap.addURLPattern("/hello");
+//        ctx.addFilterMap(filterMap);
         Tomcat.addServlet(
             ctx,
             "helloServlet",

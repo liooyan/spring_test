@@ -17,6 +17,7 @@
         <module>spring-boot-autoconfigure</module>
         <module>spring-aop</module>
         <module>spring-boot-web</module>
+        <module>spring-boot-webmvc</module>
     </modules>
 
     <parent>
